@@ -12,7 +12,7 @@ class DatabaseConnection
     public static function getConnection(): PDO
     {
         if (self::$connection === null) {
-            LoadEnv::load('/home/tuxfarm/api/config/.env');
+            LoadEnv::load('/home/cinephoria/cinephoriaService/service/config/.env');
             LoadEnv::validate(['DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD']);
 
             try {

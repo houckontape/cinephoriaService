@@ -18,9 +18,20 @@ class Router
         $this->routes=$router->getRoutes();
         //var_dump($this->routes);
         $this->method = strtolower($_SERVER['REQUEST_METHOD']);
-        $this->uri = $_SERVER['REDIRECT_URL'];
+        if(isset($_SERVER['REDIRECT_URL'])){
+            $this->uri = $_SERVER['REDIRECT_URL'];
+        }else{
+            echo "Pas de chemin";
+        }
+
         parse_str($_SERVER['QUERY_STRING'],$this->param);
-        $this->controller = explode('/', $this->uri )[1];
+        $postController = explode('/', $this->uri )[1];
+        if(isset($postController)){
+            $this->controller = explode('/', $this->uri )[1];
+        }else{
+            exit('404');
+        }
+
         if(!empty($post)){
             $this->post = $post;
         }

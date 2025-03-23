@@ -12,7 +12,7 @@ use core\Routing\Router;
 //var_dump($_POST);
 //var_dump($_COOKIE);
 //var_dump($_GET);
-//var_dump($_SERVER);
+var_dump($_SERVER);
 //var_dump($_FILES);
 //var_dump($_ENV);
 //var_dump($_REQUEST);
@@ -41,4 +41,4 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 
 
-// Supprime le chemin de base si nécessaire (exemple: /api/public/)
+// Supprime le chemin de base si nï¿½cessaire (exemple: /api/public/)

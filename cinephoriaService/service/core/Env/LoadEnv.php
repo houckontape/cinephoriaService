@@ -1,8 +1,7 @@
 <?php
 
 namespace core\Env;
-
-use core\Env\Exception;
+use Exception;
 
 /**
  * @uses permet de charger les varaibles d environement

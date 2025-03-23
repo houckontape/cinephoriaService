@@ -2,10 +2,17 @@
 
 namespace src\Models;
 
+use Cassandra\Date;
 use src\Models\Models;
 
 class SessionEntity implements Models
 {
+    public int $id;
+
+    public date $date;
+
+    public int $id_movie;
+
 
     /**
      * @inheritDoc

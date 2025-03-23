@@ -6,7 +6,17 @@ use src\Models\Models;
 
 class movieTheaterEntity implements Models
 {
+    public int $id;
 
+    public string $name;
+
+    public sting $address;
+
+    public string $phone;
+
+    public string $zipCode;
+
+    public string $city;
     /**
      * @inheritDoc
      */

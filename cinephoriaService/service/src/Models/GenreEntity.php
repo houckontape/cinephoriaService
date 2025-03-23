@@ -2,10 +2,18 @@
 
 namespace src\Models;
 
+use core\Orm\ORM;
 use src\Models\Models;
 
 class GenreEntity implements Models
 {
+    public int $id;
+    public string $name;
+    public int $minimumAge;
+
+    public ORM $orm;
+
+
 
     /**
      * @inheritDoc

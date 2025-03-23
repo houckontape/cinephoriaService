@@ -6,6 +6,9 @@ use src\Models\Models;
 
 class TicketEntity implements Models
 {
+    public int $id;
+
+    public float $price;
 
     /**
      * @inheritDoc

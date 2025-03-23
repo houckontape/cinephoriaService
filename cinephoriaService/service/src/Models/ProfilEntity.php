@@ -6,7 +6,11 @@ use src\Models\Models;
 
 class ProfilEntity implements Models
 {
+    public int $id;
 
+    public string $name;
+
+    public string $lastname;
     /**
      * @inheritDoc
      */

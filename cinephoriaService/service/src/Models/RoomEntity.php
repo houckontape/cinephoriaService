@@ -6,7 +6,10 @@ use src\Models\Models;
 
 class RoomEntity implements Models
 {
-
+    public int $id;
+    public int $numberOfColumns;
+    public int $numberOfRanks;
+    public int $movieTheaterId;
     /**
      * @inheritDoc
      */

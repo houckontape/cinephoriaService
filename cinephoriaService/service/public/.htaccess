@@ -1,0 +1,10 @@
+RewriteEngine On
+SetEnv ENV_HTACCESS_READING true
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+Options FollowSymLinks
+
+

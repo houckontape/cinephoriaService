@@ -29,9 +29,13 @@ class Movies implements Route
         }
     }
 
-    public function post()
+    public function post($data): array
     {
-        // TODO: Implement post() method.
+        //var_dump($data);
+        // nous allons implementer la creation d'un film
+        $this->movie=new MovieEntity(0,$data);
+        $this->movie->save();
+        return ['success'=>'movie created'];
     }
 
     public function put()

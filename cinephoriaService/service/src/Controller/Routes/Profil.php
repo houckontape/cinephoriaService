@@ -19,7 +19,7 @@ class Profil implements Route
         return ["hello profil"];
     }
 
-    public function post()
+    public function post($data)
     {
         // TODO: Implement post() method.
     }

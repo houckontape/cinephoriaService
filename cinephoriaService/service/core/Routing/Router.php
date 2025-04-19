@@ -60,7 +60,7 @@ class Router
                 //print_r($this->param);
                  return $objectController->{$this->method}($this->param);
             }elseif(!empty($this->post)){
-                //var_dump($this->post);
+                //var_dump($this->post);s
                 return $objectController->{$this->method}($this->post);
             }else{
                 return $objectController->{$this->method}();

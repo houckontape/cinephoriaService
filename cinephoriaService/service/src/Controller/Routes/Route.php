@@ -10,7 +10,7 @@ public function action();
 
 public function get();
 
-public function post();
+public function post(array $data);
 
 public function put();
 

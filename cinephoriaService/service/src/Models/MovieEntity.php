@@ -93,14 +93,11 @@ class MovieEntity implements Models
      */
     private function hydrateMovie(array $data)
     {
-        $this->id = $data['id'];
         $this->title = $data['title'];
         $this->synopsis = $data['synopsis'];
         $this->poster = $data['poster'];
         $this->trailer = $data['trailer'];
         $this->releaseDate = $data['releaseDate'];
-        $this->createdAt = $data['createdAt'];
-        $this->updatedAt = $data['updatedAt'];
         $this->note = $data['note'];
         $this->weLike = $data['weLike'];
         $this->duration = $data['duration'];
@@ -123,12 +120,12 @@ class MovieEntity implements Models
             'synopsis' => $this->synopsis,
             'poster' => $this->poster,
             'trailer' => $this->trailer,
-            'relaseDate' => $this->releaseDate,
+            'releaseDate' => $this->releaseDate,
             'note' => $this->note,
             'weLike' => $this->weLike,
             'duration' => $this->duration,
-            'createdAt' => $this->createdAt,
-            'updatedAt' => $this->updatedAt,
+            'createdAt' => date('Y-m-d'),
+            'updatedAt' => date('Y-m-d'),
             'genreId' => $this->genreId,
         ]);
 
@@ -198,7 +195,6 @@ class MovieEntity implements Models
     public static function recoveryLastMovie(){
         $orm=new ORM();
         $result = $orm->query('SELECT * FROM movie ORDER BY createdAt DESC LIMIT 5');
-
         $movies = [];
         foreach ($result as $movieData) {
             $movie = new MovieEntity(null, $movieData);

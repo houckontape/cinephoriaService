@@ -169,5 +169,12 @@ class ORM implements ORMInterface
         }
         return $results;
     }
+
+    public function query(string $string)
+    {
+        $stmt = $this->connection->prepare($string);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
 

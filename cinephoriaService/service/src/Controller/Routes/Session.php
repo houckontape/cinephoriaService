@@ -21,7 +21,7 @@ class Session implements Route
         // TODO: Implement get() method.
     }
 
-    public function post()
+    public function post($data)
     {
         // TODO: Implement post() method.
     }
